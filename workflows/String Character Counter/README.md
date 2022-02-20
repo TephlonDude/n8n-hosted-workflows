@@ -64,3 +64,8 @@ This is the Execute Workflow Node that you can copy and paste into your workflow
   "connections": {}
 }
 ```
+
+# Share
+If you found this workflow to be useful, please consider sharing about it:
+
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/TephlonDude.svg?style=for-the-badge&logo=twitter&label=Tweet%20This)](http://twitter.com/intent/tweet?text=Add%20an%20entire%20%40n8n_io%20workflow%20written%20by%20%40TephlonDude%20that%20counts%20the%20length%20of%20a%20string%20for%20you%20by%20adding%20a%20single%20node%20to%20your%20workflow!%20%F0%9F%A4%AF%0A%0A%23n8n%20%23automation%0A%0AHere%27s%20how%3A%0Ahttps%3A%2F%2Fgithub.com%2FTephlonDude%2Fn8n-hosted-workflows%2Ftree%2Fmain%2Fworkflows%2FString%2520Character%2520Counter)
