@@ -32,7 +32,9 @@ If there are other values that are passed along to the input of the workflow, th
 # Using this Workflow
 To use this workflow, follow these instructions:
 1. Prepare your workflow by providing a node that meets the requirements of the [expected input](#expected-input)
-2. Copy the 
+2. Copy the node in [Execute Workflow Node](#execute-workflows-node) to your workflow to create the *String Character Count* node
+3. Connect the output of your workflow to the input of the *String Character Count* node
+4. Test and use accordingly
 
 ## Execute Workflow Node
 This is the Execute Workflow Node that you can copy and paste into your workflow:
@@ -42,14 +44,14 @@ This is the Execute Workflow Node that you can copy and paste into your workflow
     {
       "parameters": {
         "source": "url",
-        "workflowUrl": "https://raw.githubusercontent.com/TephlonDude/n8n-hosted-workflows/main/README.md"
+        "workflowUrl": "https://raw.githubusercontent.com/TephlonDude/n8n-hosted-workflows/main/workflows/String%20Character%20Counter/String_Character_Counter.json"
       },
       "name": "String Character Count",
       "type": "n8n-nodes-base.executeWorkflow",
       "typeVersion": 1,
       "position": [
-        -600,
-        180
+        0,
+        0
       ]
     }
   ],
