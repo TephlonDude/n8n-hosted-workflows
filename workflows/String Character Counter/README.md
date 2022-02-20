@@ -1,9 +1,58 @@
-# n8n Hosted Workflows
-n8n has the ability to execute workflows that are hosted remotely. This is the home for a number of these workflows that are made available to you for your use at anytime.
+# String Character Counter
+This workflow will read the input value of the `string` key and determine how many characters are in this string. It will then output this value as `stringCount` along with the original string.
 
-## Note
-These workflows are constantly in flux. While I endeavour to keep them up-to-date and available, please be aware that there is no guarantee that they will always work. I reserve the right to remove them from here at anytime without notice.
+# Input and Output
 
-By using these workflows, you also take full responsibility for their use. I am not responsible for anything that these workflows do or how they are used. For example, if you use one of these workflows and their tear a hole in the space-time continuum, it's not my fault.
+## Expected Input
+This workflow expects the following input:
+``` JSON
+[
+  {
+    "string": "This is the string"
+  }
+]
+```
+The value of `string` can be any string of characters.
 
-# Using the Workflows
+## Expected Output
+Based on the input, you can expect an output similar to this:
+``` JSON
+[
+  {
+    "string": "This is the string",
+    "stringCount": 18
+  }
+]
+```
+The value of `string` is carried over from the input. The value of `stringCount` is the number of characters in the string value.
+
+### Note
+If there are other values that are passed along to the input of the workflow, these values will also be present in the output and are not removed from the result.
+
+# Using this Workflow
+To use this workflow, follow these instructions:
+1. Prepare your workflow by providing a node that meets the requirements of the [expected input](#expected-input)
+2. Copy the 
+
+## Execute Workflow Node
+This is the Execute Workflow Node that you can copy and paste into your workflow:
+``` JSON
+{
+  "nodes": [
+    {
+      "parameters": {
+        "source": "url",
+        "workflowUrl": "https://raw.githubusercontent.com/TephlonDude/n8n-hosted-workflows/main/README.md"
+      },
+      "name": "String Character Count",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1,
+      "position": [
+        -600,
+        180
+      ]
+    }
+  ],
+  "connections": {}
+}
+```
