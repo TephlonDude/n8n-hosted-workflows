@@ -52,7 +52,9 @@ This is the Execute Workflow Node that you can copy and paste into your workflow
       "position": [
         0,
         0
-      ]
+      ],
+      "notesInFlow": true,
+      "notes": "A @TephlonDude Workflow\nhttps://github.com/TephlonDude/n8n-hosted-workflows/tree/main/workflows/String%20Character%20Counter\n\nExpected Input:\n[\n  {\n    \"string\": \"This is the string\"\n  }\n]\nThe value of string can be any string of characters.\n\nExpected Output:\n[\n  {\n    \"string\": \"This is the string\",\n    \"stringCount\": 18\n  }\n]\n\nThe value of string is carried over from the input. The value of stringCount is the number of characters in the string value.\n\n"
     }
   ],
   "connections": {}
