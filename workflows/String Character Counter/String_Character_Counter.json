@@ -1,0 +1,84 @@
+{
+  "name": "String Character Counter",
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "string",
+              "value": "This is the string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set String",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        460,
+        300
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "values": {
+          "number": [
+            {
+              "name": "stringCount",
+              "value": "={{$json[\"string\"].length}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Count String",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        680,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set String",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set String": {
+      "main": [
+        [
+          {
+            "node": "Count String",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {},
+  "id": 1066
+}
