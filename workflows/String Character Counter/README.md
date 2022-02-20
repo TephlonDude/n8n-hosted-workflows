@@ -1,6 +1,8 @@
 # String Character Counter
 This workflow will read the input value of the `string` key and determine how many characters are in this string. It will then output this value as `stringCount` along with the original string.
 
+![Workflow](img/workflow.png)
+
 # Input and Output
 
 ## Expected Input
@@ -35,6 +37,8 @@ To use this workflow, follow these instructions:
 2. Copy the node in [Execute Workflow Node](#execute-workflows-node) to your workflow to create the *String Character Count* node
 3. Connect the output of your workflow to the input of the *String Character Count* node
 4. Test and use accordingly
+
+![Example Workflow](img/example.png)
 
 ## Execute Workflow Node
 This is the Execute Workflow Node that you can copy and paste into your workflow:
