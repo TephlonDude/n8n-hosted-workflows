@@ -1,5 +1,5 @@
-# String Character Counter
-This workflow will read the input value of the `string` key and determine how many characters are in this string. It will then output this value as `stringCount` along with the original string.
+# String URL Encode
+This workflow will read the input value of the `string` key and encode it for use in a URL. It will then output this value as `stringEncoded` along with the original string.
 
 ![Workflow](img/workflow.png)
 
@@ -10,23 +10,23 @@ This workflow expects the following input:
 ``` JSON
 [
   {
-    "string": "This is the string"
+    "string": "https://example.com/?This is the URL"
   }
 ]
 ```
-The value of `string` can be any string of characters.
+The value of `URL` can be any string of characters.
 
 ## Expected Output
 Based on the input, you can expect an output similar to this:
 ``` JSON
 [
   {
-    "string": "This is the string",
-    "stringCount": 18
+    "string": "https://example.com/?This is the URL",
+    "stringEncoded": "https://example.com/?This%20is%20the%20URL"
   }
 ]
 ```
-The value of `string` is carried over from the input. The value of `stringCount` is the number of characters in the string value.
+The value of `string` is carried over from the input. The value of `stringEncoded` is the encoded value of the `string`.
 
 ### Note
 If there are other values that are passed along to the input of the workflow, these values will also be present in the output and are not removed from the result.
