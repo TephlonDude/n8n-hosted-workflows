@@ -14,14 +14,14 @@ This workflow expects the following input:
   }
 ]
 ```
-The value of `URL` can be any string of characters.
+The value of `string` can be any string of characters.
 
 ## Expected Output
 Based on the input, you can expect an output similar to this:
 ``` JSON
 [
   {
-    "string": "This is the URL",
+    "string": "This is the string",
     "stringEncoded": "This%20is%20the%20string"
   }
 ]
